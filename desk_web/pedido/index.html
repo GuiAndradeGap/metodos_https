@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Pedidos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <nav class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="../cliente/index.html">Clientes</a></li>
+                <li><a href="../produto/index.html">Produtos</a></li>
+                <li><a href="../pedido/index.html">Pedidos</a></li>
+                <li><a href="../pedido_produto/index.html">Pedido_Produto</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1>Pedidos</h1>
+            <form id="add-pedido-form">
+                <input type="number" id="id_cliente" placeholder="ID do Cliente" required>
+                <input type="date" id="data" placeholder="Data do Pedido" required>
+                <button type="submit" id="submit-button">Adicionar Pedido</button>
+                <button type="button" id="edit-button" style="display: none;">Editar Pedido</button>
+            </form>
+
+            <table id="pedidos-table">
+                <thead>
+                    <tr>
+                        <th>ID do Pedido</th>
+                        <th>ID do Cliente</th>
+                        <th>Data do Pedido</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="pedidos-body">
+                    <!-- Os pedidos serão carregados aqui via JavaScript -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

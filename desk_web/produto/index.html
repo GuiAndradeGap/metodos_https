@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <nav class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="../cliente/index.html">Clientes</a></li>
+                <li><a href="../produto/index.html">Produtos</a></li>
+                <li><a href="../pedido/index.html">Pedidos</a></li>
+                <li><a href="../pedido_produto/index.html">Pedido_Produto</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1>Produtos</h1>
+
+            <form id="add-product-form">
+                <input type="text" id="nome-produto" placeholder="Nome do Produto" required>
+                <input type="text" id="descricao" placeholder="Descrição">
+                <input type="number" id="preco" placeholder="Preço" required step="0.01">
+                <input type="number" id="quantidade" placeholder="Quantidade" required>
+                <input type="date" id="validade" placeholder="Data de Validade" required>
+                <button type="submit" id="submit-button">Adicionar Produto</button>
+                <button type="button" id="edit-button" style="display: none;">Editar Produto</button>
+            </form>
+
+            <table id="produtos-table">
+                <thead>
+                    <tr>
+                        <th>ID Produto</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Validade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="produtos-body">
+                    <!-- Os produtos serão carregados aqui via JavaScript -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

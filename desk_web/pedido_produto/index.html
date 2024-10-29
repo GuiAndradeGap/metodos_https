@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Pedidos Produtos</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o CSS -->
+</head>
+<body>
+    <div class="dashboard">
+        <nav class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="../cliente/index.html">Clientes</a></li>
+                <li><a href="../produto/index.html">Produtos</a></li>
+                <li><a href="../pedido/index.html">Pedidos</a></li>
+                <li><a href="../pedido_produto/index.html">Pedido_Produto</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1>Pedidos Produtos</h1>
+
+            <form id="add-pedido-produto-form">
+                <select id="id_pedido" required>
+                    <option value="" disabled selected>ID do Pedido</option>
+                    <!-- As opções de pedidos serão carregadas aqui via JavaScript -->
+                </select>
+                <select id="id_produto" required>
+                    <option value="" disabled selected>ID do Produto</option>
+                    <!-- As opções de produtos serão carregadas aqui via JavaScript -->
+                </select>
+                <input type="number" id="qtd" placeholder="Quantidade" required>
+                <button type="submit" id="submit-button">Adicionar Pedido Produto</button>
+                <button type="button" id="edit-button" style="display: none;">Editar Pedido Produto</button>
+            </form>
+
+            <table id="pedidos-produtos-table">
+                <thead>
+                    <tr>
+                        <th>ID do Pedido</th>
+                        <th>ID do Produto</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="pedidos-produtos-body">
+                    <!-- Os pedidos produtos serão carregados aqui via JavaScript -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script> <!-- Link para o JavaScript -->
+</body>
+</html>

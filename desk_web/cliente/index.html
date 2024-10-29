@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Clientes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <nav class="sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">Clientes</a></li>
+                <li><a href="../produto/index.html">Produtos</a></li>
+                <li><a href="../pedido/index.html">Pedidos</a></li>
+                <li><a href="../pedido_produto/index.html">Pedido_Produto</a></li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <h1>Clientes</h1>
+            <form id="add-client-form">
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="endereco" placeholder="Endereço">
+                <input type="text" id="cpf" placeholder="CPF" required>
+                <input type="text" id="telefone" placeholder="Telefone">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="date" id="data-nascimento" placeholder="Data de Nascimento" required>
+                <button type="submit" id="submit-button">Adicionar Cliente</button>
+                <button type="button" id="edit-button" style="display: none;">Editar Cliente</button>
+            </form>
+
+            <table id="clientes-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>Email</th>
+                        <th>Data de Nascimento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="clientes-body">
+                    <!-- Os clientes serão carregados aqui via JavaScript -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
